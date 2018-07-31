@@ -1,7 +1,3 @@
-
-## 前后端分离实践----blog's backend
-### 前端地址---- [blog's frontend](https://github.com/FantasyGao/blog-frontend.git)
-
 #### 简介:通过vue.js框架与[koa2框架](https://github.com/FantasyGao/koa2.git)分别搭建前后端，利用ngnix端口分发部署实现代码全分离，开发全分离。
 
 #### nginx文件配置内容
@@ -31,13 +27,7 @@ mognodb 3.0+
 ```
 ##### 2. 依赖于mongodb数据库
        先安装 [mongodb](https://www.mongodb.com/) 数据库，安装完成后运行数据库，开启27017（默认）端口
-##### 3. 克隆到本地，安装依赖，运行
-```
-> git clone https://github.com/FantasyGao/blog-backend.git
-> cd blog-backend
-> npm install 
-> npm start
-```
+
 ### 简要概述
 
 #### 1. 全部使用ES6语法，aysnc+await结构
