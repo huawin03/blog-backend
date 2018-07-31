@@ -7,7 +7,7 @@ module.exports = async ( ctx, next ) => {
     }
     let tokenContent;
     try {
-        tokenContent = await jwt.verify(token, 'mynameisFantasyGao');     //如果token过期或验证失败，将抛出错误
+        tokenContent = await jwt.verify(token, 'mynameispingping');     //如果token过期或验证失败，将抛出错误
     } catch (err) {
         ctx.throw(401, 'token失效');
     }

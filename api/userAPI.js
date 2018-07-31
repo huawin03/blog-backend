@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const secret = 'mynameisFantasyGao'; // 指定密钥，这是之后用来判断 token 合法性的标志
+const secret = 'mynameispingping'; // 指定密钥，这是之后用来判断 token 合法性的标志
 
 const db = require('../db/model.js')
 const UserModel    = db.userAPI

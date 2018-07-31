@@ -13,24 +13,24 @@ const userAPI = require('../api/userAPI.js')
 const logAPI = require('../api/logAPI.js')
 
 
-//上传配置  
-const storage = multer.diskStorage({  
-	//文件保存路径  
-	destination: function (req, file, cb) {  
-		cb(null, 'public/uploads/')  
-	},  
-	//修改文件名称  
+//上传配置
+const storage = multer.diskStorage({
+	//文件保存路径
+	destination: function (req, file, cb) {
+		cb(null, 'public/uploads/')
+	},
+	//修改文件名称
 	filename: function (req, file, cb) {
-		var fileFormat = (file.originalname).split(".");  
-		cb(null,Date.now() + "." + fileFormat[fileFormat.length - 1]);  
+		var fileFormat = (file.originalname).split(".");
+		cb(null,Date.now() + "." + fileFormat[fileFormat.length - 1]);
 	}  
 })
 const limits = {
 	fieldSize: '2MB',
 	files: 5
 }
-//加载配置  
-const upload = multer({ storage: storage, limits: limits});  
+//加载配置
+const upload = multer({ storage: storage, limits: limits});
 
 // admin
 const add         = articleAPI.ADD_ARTICLE_INFO_API
