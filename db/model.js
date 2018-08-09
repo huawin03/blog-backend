@@ -31,12 +31,12 @@ let articleItem = {
             like:[String],
             replyList:[
                 {
-                    replyName:String,
-                    replyEmail:String,
-                    replyShow: { type: Number, default: 1 },
-                    replyedUser:String,
-                    replyTime: { type: Date, default: Date.now },
-                    replyContent:String
+                  replyName:String,
+                  replyEmail:String,
+                  replyShow: { type: Number, default: 1 },
+                  replyedUser:String,
+                  replyTime: { type: Date, default: Date.now },
+                  replyContent:String
                 }
             ]
         }

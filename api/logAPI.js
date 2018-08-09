@@ -17,7 +17,7 @@ var resObj = (code,msg,token) => {
 }
 
 /**
- *  日志信息  
+ *  日志信息
  */
 exports.LOGS_USER_API = async(ctx,next)=>{
     let getParams = ctx.request.query;

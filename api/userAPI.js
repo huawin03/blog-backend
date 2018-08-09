@@ -30,7 +30,7 @@ var logObj = (user,ip,msg) => {
     }
 }
 /**
- *  用户信息  
+ *  用户信息
  */
 exports.USER_REGISTER_API = async(ctx,next)=>{
     var addInfo = ctx.request.query
@@ -73,6 +73,7 @@ exports.USER_REGISTER_API = async(ctx,next)=>{
 // login
 exports.USER_LOGIN_API = async(ctx,next)=>{
     let Info = ctx.request.query
+    console.log('enter login');
     console.log(Info)
     if (!Info.user||!Info.password) {
         ctx.status = 200
@@ -86,6 +87,8 @@ exports.USER_LOGIN_API = async(ctx,next)=>{
     try {
         await UserModel.find(userObj).exec()
             .then((data) => {
+                console.log('data1111111111111');
+                console.log(data)
                 if (data.length == 1) {
                     if(data[0].password==Info.password){
                          // 日志服务
@@ -103,7 +106,7 @@ exports.USER_LOGIN_API = async(ctx,next)=>{
                         ctx.body = resObj(2,'密码错误')
                     }
                 } else {
-                    ctx.body = resObj(2,'不存在用户名')
+                    ctx.body = resObj(2,'不存在的用户名')
                 }
             })
             .catch((e) => {
